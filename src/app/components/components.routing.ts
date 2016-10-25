@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     component: Components,
     children: [
-      { path: 'my-navbar', component: NavbarComponent }
+      { path: 'top-navbar', component: NavbarComponent }
     ]
   }
 ];
