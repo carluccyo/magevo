@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'magevo-navbar',
+    selector: 'my-navbar',
     template: `
     <nav class="navbar navbar-light navbar-dark bg-primary bg-faded">
 

@@ -1,7 +1,7 @@
 import { Routes, RouterModule }  from '@angular/router';
 
 import { Components } from './components.component';
-import { TreeView } from './navbar/navbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     component: Components,
     children: [
-      { path: 'treeview', component: TreeView }
+      { path: 'my-navbar', component: NavbarComponent }
     ]
   }
 ];

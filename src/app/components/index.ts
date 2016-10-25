@@ -1,1 +1,2 @@
-export * from './components.component';
+export * from './navbar';
+export * from './components.module';

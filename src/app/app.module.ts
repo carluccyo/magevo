@@ -11,6 +11,7 @@ import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
@@ -25,7 +26,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent
   ],
   providers: [
     ApiService
