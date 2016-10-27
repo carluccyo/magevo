@@ -91,8 +91,11 @@ module.exports = function makeWebpackConfig() {
         loaders: ['awesome-typescript-loader?' + atlOptions, 'angular2-template-loader',
           '@angularclass/hmr-loader'
         ],
-        // exclude: [isTest ? /\.(e2e)\.ts$/ : /\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/]
-        exclude: [isTest ? /\.(e2e)\.ts$/ : /\.(spec|e2e)\.ts$/]
+        //exclude: [isTest ? /\.(e2e)\.ts$/ : /\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/],
+        exclude: [isTest ? /\.(e2e)\.ts$/ : /\.(spec|e2e)\.ts$/],
+        // include: [
+        //   path.resolve(__dirname, "./node_modules/angular2-logger")
+        // ]
       },
 
       // copy those assets to output
