@@ -15,6 +15,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
+import { ILogger, Logger, Level } from 'angular2-logger/core';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -30,13 +32,20 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     NavbarComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    Logger
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
-  constructor(public appRef: ApplicationRef) {}
+  constructor(public appRef: ApplicationRef, public logger: Logger) {
+    var logLevel = Level.LOG;
+    this.logger.level = logLevel;
+    this.logger.store();
+    this.logger.info('set logger to Level', logLevel);
+  }
+
 
   hmrOnInit(store) {
     console.log('HMR store', store);
