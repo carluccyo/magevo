@@ -40,6 +40,11 @@ import { ILogger, Logger, Level } from 'angular2-logger/core';
 export class AppModule {
 
   constructor(public appRef: ApplicationRef, public logger: Logger) {
+    this.initLogger();
+  }
+
+
+  initLogger(){
     var logLevel = Level.LOG;
     this.logger.level = logLevel;
     this.logger.store();
