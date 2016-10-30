@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ILogger, Logger, Level } from 'angular2-logger/core';
-import { PageConstant } from '../shared/pageConst';
+import { PageConstant } from '../shared/page.consts';
 
 @Component({
     selector: PageConstant.HOME_SELECTOR,
