@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
 
     constructor(public logger: Logger) { }
 
+    title = 'List of items';
+
     ngOnInit() {
 
       this.logger.group();
@@ -21,6 +23,7 @@ export class HomeComponent implements OnInit {
       this.logger.debug('This is a priority level 4 debug message...');
       this.logger.log('This is a priority level 5 log message...');
       this.logger.groupEnd();
+
     }
 
 
