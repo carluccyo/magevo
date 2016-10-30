@@ -6,6 +6,7 @@ import { TestBed } from '@angular/core/testing';
 import { HomeComponent } from './pages/home.component';
 
 describe('Home Component', () => {
+
   const html = '<my-home></my-home>';
 
   beforeEach(() => {

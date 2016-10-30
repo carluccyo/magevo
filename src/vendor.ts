@@ -19,5 +19,5 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'font-awesome/css/font-awesome.css';
 import 'simple-line-icons/css/simple-line-icons.css';
 
-import 'ionicons/dist/css/ionicons-core.css'; 
+import 'ionicons/dist/css/ionicons-core.css';
 import 'ionicons/dist/css/ionicons.css';
