@@ -14,6 +14,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ItemComponent} from './shared/item.component';
+
 
 import { ILogger, Logger, Level } from 'angular2-logger/core';
 
@@ -29,6 +31,7 @@ import { ILogger, Logger, Level } from 'angular2-logger/core';
     HomeComponent,
     AboutComponent,
     DashboardComponent,
+    ItemComponent,
     NavbarComponent
   ],
   providers: [
