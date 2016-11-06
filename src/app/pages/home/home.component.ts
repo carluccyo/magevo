@@ -6,6 +6,8 @@ import { ItemListService } from '../../shared/itemList.service';
 import { Item } from '../../shared/item.model';
 import { ItemComponent } from '../../shared/item.component';
 
+import { LocationService, Location } from "angular2-geolocalitation/core";
+
 @Component({
     selector: PageConstant.HOME_SELECTOR,
     templateUrl: './home.component.html',
@@ -14,15 +16,18 @@ import { ItemComponent } from '../../shared/item.component';
 })
 export class HomeComponent implements OnInit {
 
-    constructor(public logger: Logger, private itemListService: ItemListService){ }
+    constructor(public logger: Logger, private itemListService: ItemListService, public locationService: LocationService) { }
 
     title = 'List of items';
+
+    location: Location;
 
     items: Item[];
 
     ngOnInit() {
         this.logger.debug('ItemListComponent init...');
         this.getItems();
+        this.location = this.locationService.getLocation();
     }
 
     getItems() {

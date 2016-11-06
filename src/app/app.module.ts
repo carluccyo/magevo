@@ -19,6 +19,8 @@ import { ItemComponent} from './shared/item.component';
 
 import { ILogger, Logger, Level } from 'angular2-logger/core';
 
+import {LocationService, Location} from "angular2-geolocalitation/core";
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { ILogger, Logger, Level } from 'angular2-logger/core';
   ],
   providers: [
     ApiService,
-    Logger
+    Logger,
+    LocationService
   ],
   bootstrap: [AppComponent]
 })
