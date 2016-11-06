@@ -21,11 +21,14 @@ import { ILogger, Logger, Level } from 'angular2-logger/core';
 
 import {LocationService, Location} from "angular2-geolocalitation/core";
 
+import { PagesModule } from './pages/pages.module';
+
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
+    PagesModule,
     routing
   ],
   declarations: [
