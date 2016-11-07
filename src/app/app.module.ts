@@ -22,6 +22,8 @@ import { ILogger, Logger, Level } from 'angular2-logger/core';
 import {LocationService, Location} from "angular2-geolocalitation/core";
 
 import { PagesModule } from './pages/pages.module';
+import { HomeModule} from './pages/home/home.module';
+
 
 @NgModule({
   imports: [
@@ -33,7 +35,6 @@ import { PagesModule } from './pages/pages.module';
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
     AboutComponent,
     DashboardComponent,
     ItemComponent,
