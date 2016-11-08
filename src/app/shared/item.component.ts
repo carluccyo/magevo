@@ -43,8 +43,8 @@ export class ItemComponent implements OnInit, OnDestroy {
 
     constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() { }
 
-    ngOnDestroy() {}
+    ngOnDestroy() { }
 
 }

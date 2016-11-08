@@ -4,6 +4,7 @@ import { ITEMS } from './mock-item'
 
 @Injectable()
 export class ItemListService {
+
     constructor() { }
 
     getItems() {
@@ -12,7 +13,7 @@ export class ItemListService {
 
     getItemsSlowly() {
         return new Promise<Item[]>(
-              resolve => setTimeout(() => resolve(ITEMS), 2000) // 2 seconds
+            resolve => setTimeout(() => resolve(ITEMS), 2000) // 2 seconds
         );
     }
 
