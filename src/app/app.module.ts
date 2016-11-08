@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
+
 import { AboutComponent } from './about/about.component';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
@@ -16,10 +16,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
-
-import { ILogger, Logger, Level } from 'angular2-logger/core';
-
-import {LocationService, Location} from "angular2-geolocalitation/core";
+import { Logger, Level } from 'angular2-logger/core';
+import {LocationService} from 'angular2-geolocalitation/core';
 
 import { PagesModule } from './pages/pages.module';
 import { HomeModule} from './pages/home/home.module';
@@ -54,8 +52,8 @@ export class AppModule {
   }
 
 
-  initLogger(){
-    var logLevel = Level.LOG;
+  initLogger() {
+    let logLevel = Level.LOG;
     this.logger.level = logLevel;
     this.logger.store();
     this.logger.info('set logger to Level', logLevel);
