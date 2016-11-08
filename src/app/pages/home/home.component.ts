@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     items: Item[];
 
     ngOnInit() {
-        this.logger.debug('ItemListComponent init...');
+        this.logger.debug('HomeComponent init...');
         this.getItems();
         this.location = this.locationService.getLocation();
     }

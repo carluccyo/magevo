@@ -1,4 +1,4 @@
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -7,8 +7,7 @@ import { routing } from './home.routing';
 
 import { HomeComponent } from './home.component';
 
-
-import { ILogger, Logger, Level } from 'angular2-logger/core';
+import { Logger } from 'angular2-logger/core';
 
 import { LocationService, Location } from "angular2-geolocalitation/core";
 
