@@ -12,7 +12,10 @@ import { LocationService, Location } from "angular2-geolocalitation/core";
     selector: PageConstant.HOME_SELECTOR,
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    providers: [Logger, ItemListService]
+    providers: [
+      Logger,
+      ItemListService
+    ]
 })
 export class HomeComponent implements OnInit {
 

@@ -4,37 +4,39 @@ import { Item } from './item.model'
 @Component({
     selector: 'item-detail',
     template: `
-    <article class = "item-detail">
-      <h1>{{item.title}}</h1>
-      <div class="item-media"><img src={{item.mediaUrl}} /></div>
-      <div><span class="badge">{{item.id}}</span>{{item.description}}</div>
-    </article>
+    <div class="row item-box">
+      <div class="col-sm-12 col-xs-12">
+
+        <div class=" item-media">
+          <div class=""></div>
+          <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="rounded-top" />
+        </div>
+
+        <div>.col-sm-10</div>
+      </div>
+
+    </div>
     `,
     styles: [`
-    .item-detail {
-    }
-    .text {
-      position: relative;
-      top: -3px;
-      padding: 1em 1em 0 1em;
-    }
-    .item-detail .item-media {
-    }
-    .item-detail .badge {
-      display: inline-block;
-      font-size: small;
-      color: white;
-      padding: 1em 1em 0 1em;
-      background-color: #607D8B;
-      line-height: 1em;
-      position: relative;
-      left: -1px;
-      top: -4px;
-      height: 1.8em;
-      margin-right: .8em;
-      border-radius: 4px 0 0 4px;
-    }
-  `]
+      .item-box{
+        border: 2px solid #ddd;
+        margin: 2px;
+        padding: 5px;
+      }
+
+      .item-media{
+        width: 36%;
+        float: left;
+        position: relative;
+      }
+
+      .item-media img{
+        width: 100%;
+        display: block;
+        z-index: 2;
+      }
+
+      `]
 })
 
 export class ItemComponent implements OnInit, OnDestroy {
