@@ -9,7 +9,7 @@ import { ItemComponent } from '../../shared/item.component';
 import { LocationService, Location } from "angular2-geolocalitation/core";
 
 @Component({
-    selector: PageConstant.HOME_SELECTOR,
+    selector: PageConstant.HOME_SELECTOR + PageConstant.SUFFIX,
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
     providers: [

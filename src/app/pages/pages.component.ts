@@ -1,6 +1,9 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+
+import { PageConstant } from './shared/page.consts';
+
 @Component({
-  selector: 'pages',
+  selector: PageConstant.PAGES_SELECTOR,
   encapsulation: ViewEncapsulation.None,
   styles: [],
   template: `

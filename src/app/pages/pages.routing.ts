@@ -1,9 +1,12 @@
 import { Routes, RouterModule }  from '@angular/router';
 import { Pages } from './pages.component';
+
+import { PageConstant } from './shared/page.consts';
+
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   {
-    path: 'pages',
+    path: PageConstant.PAGES_SELECTOR,
     component: Pages,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
