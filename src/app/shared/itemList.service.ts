@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Item } from './Item.model'
-import { ITEMS } from './mock-item'
+import { Item } from './Item.model';
+import { ITEMS } from './mock-item';
 
 @Injectable()
 export class ItemListService {
