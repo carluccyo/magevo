@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ILogger, Logger, Level } from 'angular2-logger/core';
+import { Logger } from 'angular2-logger/core';
 import { PageConstant } from '../shared/page.consts';
 
-import { ItemListService } from '../../shared/itemList.service';
 import { Item } from '../../shared/item.model';
-import { ItemComponent } from '../../shared/item.component';
-
+import { ItemListService } from '../../shared/itemList.service';
 import { LocationService, Location } from "angular2-geolocalitation/core";
 
 @Component({
