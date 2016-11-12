@@ -11,7 +11,7 @@ import { Logger } from 'angular2-logger/core';
 
 import { LocationService, Location } from "angular2-geolocalitation/core";
 
-import { ItemListService } from '../../shared/itemList.service';
+import { ItemListService } from '../../shared/item.list.service';
 import { ItemComponent } from '../../shared/item.component';
 
 @NgModule({
