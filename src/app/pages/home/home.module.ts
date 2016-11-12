@@ -9,7 +9,7 @@ import { HomeComponent } from './home.component';
 
 import { Logger } from 'angular2-logger/core';
 
-import { LocationService, Location } from "angular2-geolocalitation/core";
+import { LocationService } from 'angular2-geolocalitation/core';
 
 import { ItemListService } from '../../shared/item/item.list.service';
 import { ItemComponent } from '../../shared/item/item.component';
