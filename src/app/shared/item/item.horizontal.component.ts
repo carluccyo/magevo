@@ -2,38 +2,31 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
 import { Item } from './item.model'
 
 @Component({
-    selector: 'item-detail',
+    selector: 'item-horizontal',
     template: `
+      <div class="row item-box">
 
-    <div class="row item-box">
+        <div class="col-sm-12 col-xs-12">
 
-      <div class="col-sm-12 col-xs-12">
+          <div class="col-sm-6 col-xs-12">
+            <div class="clear"></div>
+            <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
+          </div>
 
-        <div class="col-sm-6 col-xs-12">
-          <div class="clear"></div>
-          <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
-        </div>
+          <div class="col-sm-6 col-xs-12">
+            <div class="time">16:13 - 12 novembre 2016</div>
+            <div class="message">ciaone</div>
+          </div>
 
-        <div class="col-sm-6 col-xs-12">
-          <div class="time">16:13 - 12 novembre 2016</div>
-          <div class="message">ciaone</div>
         </div>
 
       </div>
-
-    </div>
-
     `,
     styles: [`
-
-        .red {
-          border: 1px solid red;
-        }
 
         .item-desc{
             margin: 2px;
         }
-
 
         .time {
           text-align: left;
@@ -82,7 +75,7 @@ import { Item } from './item.model'
       `]
 })
 
-export class ItemComponent implements OnInit, OnDestroy {
+export class ItemHorizontalComponent implements OnInit, OnDestroy {
 
     @Input() item: Item;
 

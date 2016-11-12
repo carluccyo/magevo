@@ -13,6 +13,7 @@ import { LocationService } from 'angular2-geolocalitation/core';
 
 import { ItemListService } from '../../shared/item/item.list.service';
 import { ItemComponent } from '../../shared/item/item.component';
+import { ItemHorizontalComponent } from '../../shared/item/item.horizontal.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { ItemComponent } from '../../shared/item/item.component';
     ],
     declarations: [
         HomeComponent,
-        ItemComponent
+        ItemComponent,
+        ItemHorizontalComponent
     ],
     providers: [
         Logger,
