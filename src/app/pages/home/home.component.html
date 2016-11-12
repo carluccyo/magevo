@@ -4,7 +4,15 @@
 
   <div class="row">
 
-    <div class="col-sm-8">
+    <div class="col-md-8">
+
+      <div *ngFor="let item of items; let i = index; trackBy: trackByFn">
+        <item-detail [item]="item"></item-detail>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
 
       <div *ngFor="let item of items; let i = index; trackBy: trackByFn">
         <item-detail [item]="item"></item-detail>
@@ -13,3 +21,5 @@
     </div>
 
   </div>
+
+</div>

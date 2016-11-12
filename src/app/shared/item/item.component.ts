@@ -4,6 +4,7 @@ import { Item } from './item.model'
 @Component({
     selector: 'item-detail',
     template: `
+
     <div class="row item-box">
 
       <div class="col-sm-12 col-xs-12">
@@ -12,7 +13,7 @@ import { Item } from './item.model'
 
           <div class="clear"></div>
 
-          <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="rounded-top col-sm-12 col-xs-12" />
+          <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="col-sm-12 col-xs-12" />
 
         </div>
 
@@ -20,13 +21,18 @@ import { Item } from './item.model'
 
           <div class="time">16:13 - 12 novembre 2016</div>
 
-          <div class="red">ciaone</div>
+          <div class="message">ciaone</div>
+
+          <div class="success">ciaone</div>
+
+          <div class="warning">ciaone</div>
 
       </div>
 
       </div>
 
     </div>
+    
     `,
     styles: [`
 
