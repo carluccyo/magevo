@@ -12,6 +12,8 @@ import { routing } from './app.routing';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ScrollNavbarComponent } from './components/scroll-navbar/scroll.navbar.component';
+
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
@@ -21,6 +23,8 @@ import {LocationService} from 'angular2-geolocalitation/core';
 
 import { PagesModule } from './pages/pages.module';
 import { HomeModule} from './pages/home/home.module';
+
+import { WindowRef} from './shared/window/WindowRef'
 
 
 @NgModule({
@@ -36,12 +40,14 @@ import { HomeModule} from './pages/home/home.module';
     AppComponent,
     AboutComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    ScrollNavbarComponent
   ],
   providers: [
     ApiService,
     Logger,
-    LocationService
+    LocationService,
+    WindowRef
   ],
   bootstrap: [AppComponent]
 })
