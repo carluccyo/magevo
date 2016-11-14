@@ -13,6 +13,8 @@ export class AppComponent {
 
   url = 'https://github.com/carluccyo/magevo';
 
+  title = 'MagevoTitle';
+
   constructor(private api: ApiService) {
     // Do something with api
   }

@@ -29,7 +29,7 @@ import { Observable } from 'rxjs/Rx';
 
           <ul class="nav navbar-nav">
 
-            <li class="active"><a [routerLink]="['']">Home</a></li>
+            <li><a [routerLink]="['']">Home</a></li>
             <li><a [routerLink]="['about']">About</a></li>
             <li><a  [routerLink]="['dashboard']">Dashboard</a></li>
 
