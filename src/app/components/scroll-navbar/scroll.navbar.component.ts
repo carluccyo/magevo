@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Rx';
     selector: 'top-scroll-navbar',
     template: `
 
-    <nav class="navbar navbar-default navbar-fixed-top" [class.top-nav-collapse]="isClassVisible">
+    <nav class="navbar navbar-default navbar-fixed-top blu-background" [class.top-nav-collapse]="isClassVisible">
 
       <div class="container">
 
@@ -21,7 +21,7 @@ import { Observable } from 'rxjs/Rx';
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" [routerLink]="['']">Project name</a>
+          <a class="navbar-brand blu-background-el" [routerLink]="['']">Project name</a>
 
         </div>
 
@@ -29,9 +29,9 @@ import { Observable } from 'rxjs/Rx';
 
           <ul class="nav navbar-nav">
 
-            <li><a [routerLink]="['']">Home</a></li>
-            <li><a [routerLink]="['about']">About</a></li>
-            <li><a  [routerLink]="['dashboard']">Dashboard</a></li>
+            <li><a class="blu-background-el" [routerLink]="['']">Home</a></li>
+            <li><a class="blu-background-el" [routerLink]="['about']">About</a></li>
+            <li><a class="blu-background-el" [routerLink]="['dashboard']">Dashboard</a></li>
 
             <!--<li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -66,6 +66,16 @@ import { Observable } from 'rxjs/Rx';
           -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
           -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
           transition: background .5s ease-in-out,padding .5s ease-in-out;
+        }
+
+        .blu-background {
+          background: #006baf;
+          color: #fff !important;
+        }
+
+        .blu-background-el {
+          color: #fff !important;
+          border-left: 1px red;
         }
 
         .top-nav-collapse {

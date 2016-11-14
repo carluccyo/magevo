@@ -5,21 +5,8 @@ import { Item } from './item.model'
     selector: 'item-horizontal',
     template: `
       <div class="row item-box">
-
-        <div class="col-sm-12 col-xs-12">
-
-          <div class="col-sm-6 col-xs-12">
-            <div class="clear"></div>
-            <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
-          </div>
-
-          <div class="col-sm-6 col-xs-12">
-            <div class="time">16:13 - 12 novembre 2016</div>
-            <div class="message">ciaone</div>
-          </div>
-
-        </div>
-
+        <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
+        <div class="message">ciaone</div>
       </div>
     `,
     styles: [`
@@ -55,9 +42,9 @@ import { Item } from './item.model'
         }
 
         .item-box{
-          border: 2px solid #ddd;
-          margin: 2px;
-          padding: 5px;
+          border: 3px solid #006baf;
+          margin: 0;
+          padding: 1px;
         }
 
         .item-media{
