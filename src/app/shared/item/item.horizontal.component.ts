@@ -6,7 +6,7 @@ import { Item } from './item.model'
     template: `
       <div class="row item-box">
         <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
-        <div class="message">ciaone</div>
+        <div class="message">{{item.title}}</div>
       </div>
     `,
     styles: [`

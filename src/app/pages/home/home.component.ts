@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
     location: Location;
 
     items: Item[];
+    horizontalItems: Item[];
 
     ngOnInit() {
         this.logger.debug('HomeComponent init...');
@@ -42,6 +43,7 @@ export class HomeComponent implements OnInit {
 
     getItems() {
         this.itemListService.getItems().then(items => this.items = items);
+        this.itemListService.getItemsSlowly().then(horizontalItems => this.horizontalItems = horizontalItems);
     }
 
     expand(_item : Item) {
