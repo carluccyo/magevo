@@ -21,6 +21,26 @@ import { LocationService, Location } from "angular2-geolocalitation/core";
         transition('collapsed <=> expanded', [
           animate(1000)
         ])
+      ]),
+      trigger('flyHorizontalOut', [
+        state('in', style({transform: 'translateX(0)'})),
+        transition('void => *', [
+          style({transform: 'translateX(-100%)'}),
+          animate(1000)
+        ]),
+        transition('* => void', [
+          animate(1000, style({transform: 'translateX(100%)'}))
+        ])
+      ]),
+      trigger('flyVerticalOut', [
+        state('in', style({transform: 'translateY(0)'})),
+        transition('void => *', [
+          style({transform: 'translateY(-100%)'}),
+          animate(1500)
+        ]),
+        transition('* => void', [
+          animate(1500, style({transform: 'translateY(100%)'}))
+        ])
       ])
     ]
 })
