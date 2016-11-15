@@ -26,10 +26,10 @@ import { LocationService, Location } from "angular2-geolocalitation/core";
         state('in', style({transform: 'translateX(0)'})),
         transition('void => *', [
           style({transform: 'translateX(-100%)'}),
-          animate(1000)
+          animate(1300)
         ]),
         transition('* => void', [
-          animate(1000, style({transform: 'translateX(100%)'}))
+          animate(1300, style({transform: 'translateX(100%)'}))
         ])
       ]),
       trigger('flyVerticalOut', [
