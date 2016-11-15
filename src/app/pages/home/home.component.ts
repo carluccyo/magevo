@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AUTO_STYLE, Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { Logger } from 'angular2-logger/core';
 import { PageConstant } from '../shared/page.consts';
 
@@ -13,6 +13,15 @@ import { LocationService, Location } from "angular2-geolocalitation/core";
     providers: [
       Logger,
       ItemListService
+    ],
+    animations: [
+      trigger('animationState', [
+        state('collapsed, void', style({ borderBottom: '0' })),
+        state('expanded, void', style({ boxShadow: '8px 8px 3px #006bae' })),
+        transition('collapsed <=> expanded', [
+          animate(1000)
+        ])
+      ])
     ]
 })
 export class HomeComponent implements OnInit {
@@ -33,6 +42,14 @@ export class HomeComponent implements OnInit {
 
     getItems() {
         this.itemListService.getItems().then(items => this.items = items);
+    }
+
+    expand(_item : Item) {
+      _item.animationState = 'expanded';
+    }
+
+    collapse(_item : Item) {
+      _item.animationState = 'collapsed';
     }
 
 
