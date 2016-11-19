@@ -50,6 +50,8 @@ export class HomeComponent implements OnInit {
 
   title = 'List of items';
 
+  showTopBanner = true;
+
   location: Location;
 
   items: Item[];
