@@ -5,14 +5,18 @@ import { Item } from './item.model'
     selector: 'item-vertical',
     template: `
       <div class="row item-vertical-box">
-        <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
+        <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive m-l-0" />
         <div class="message">{{item.title}}</div>
       </div>
     `,
     styles: [`
 
-        .item-desc{
+        .item-desc {
             margin: 2px;
+        }
+
+        .m-l-0 {
+          margin: 0;
         }
 
         .time {
