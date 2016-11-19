@@ -16,6 +16,8 @@ import { ItemComponent } from '../../shared/item/item.component';
 import { ItemHorizontalComponent } from '../../shared/item/item.horizontal.component';
 import { ItemVerticalComponent } from '../../shared/item/item.vertical.component';
 
+import { TopBannerComponent } from './top-banner'
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -27,7 +29,8 @@ import { ItemVerticalComponent } from '../../shared/item/item.vertical.component
         HomeComponent,
         ItemComponent,
         ItemHorizontalComponent,
-        ItemVerticalComponent
+        ItemVerticalComponent,
+        TopBannerComponent
     ],
     providers: [
         Logger,
