@@ -17,6 +17,7 @@ import { ItemHorizontalComponent } from '../../shared/item/item.horizontal.compo
 import { ItemVerticalComponent } from '../../shared/item/item.vertical.component';
 
 import { TopBannerComponent } from './top-banner'
+import {BoxArchiveComponent} from './box-archive';
 
 @NgModule({
     imports: [
@@ -30,7 +31,8 @@ import { TopBannerComponent } from './top-banner'
         ItemComponent,
         ItemHorizontalComponent,
         ItemVerticalComponent,
-        TopBannerComponent
+        TopBannerComponent,
+        BoxArchiveComponent
     ],
     providers: [
         Logger,

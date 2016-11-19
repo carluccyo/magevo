@@ -15,15 +15,18 @@
 
 </div>
 
+
 <div class="container">
 
   <div class="row">
 
     <div class="col-md-8">
+
       <div on-mouseover='expand(item)' on-mouseleave='collapse(item)' [@flyHorizontalOut]='item.id' [@animationState]='item.animationState'
         *ngFor="let item of items; let i = index; trackBy: trackByFn">
         <item-detail [item]="item"></item-detail>
       </div>
+      
     </div>
 
     <div class="col-md-4">
