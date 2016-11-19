@@ -17,9 +17,9 @@ import { LocationService, Location } from "angular2-geolocalitation/core";
   animations: [
     trigger('animationState', [
       state('collapsed, void', style({ borderBottom: '0' })),
-      state('expanded, void', style({ boxShadow: '8px 8px 3px #006bae' })),
+      state('expanded, void', style({ boxShadow: '2px 2px 2px 2px #006bae' })),
       transition('collapsed <=> expanded', [
-        animate(1000)
+        animate(500)
       ])
     ]),
     trigger('flyHorizontalOut', [

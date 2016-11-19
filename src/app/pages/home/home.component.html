@@ -29,7 +29,7 @@
     <div class="col-md-4">
 
       <div *ngFor="let item of items; let i = index; trackBy: trackByFn">
-        <pre>{{item | json}}</pre>
+        <item-vertical [item]="item"></item-vertical>
       </div>
 
     </div>

@@ -14,6 +14,7 @@ import { LocationService } from 'angular2-geolocalitation/core';
 import { ItemListService } from '../../shared/item/item.list.service';
 import { ItemComponent } from '../../shared/item/item.component';
 import { ItemHorizontalComponent } from '../../shared/item/item.horizontal.component';
+import { ItemVerticalComponent } from '../../shared/item/item.vertical.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { ItemHorizontalComponent } from '../../shared/item/item.horizontal.compo
     declarations: [
         HomeComponent,
         ItemComponent,
-        ItemHorizontalComponent
+        ItemHorizontalComponent,
+        ItemVerticalComponent
     ],
     providers: [
         Logger,
