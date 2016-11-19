@@ -21,7 +21,7 @@ import { LocationService } from 'angular2-geolocalitation/core';
 import { PagesModule } from './pages/pages.module';
 import { HomeModule } from './pages/home/home.module';
 
-import { WindowRef } from './shared/window/WindowRef'
+import { WindowRef } from './shared/window/WindowRef';
 
 
 @NgModule({

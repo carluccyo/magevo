@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Logger } from 'angular2-logger/core';
 
 @Component({
-    selector: 'top-navbar',
-    template: `
+  selector: 'top-navbar',
+  template: `
 
     <nav class="navbar navbar-default navbar-fixed-top">
 
@@ -60,10 +60,10 @@ import { Logger } from 'angular2-logger/core';
 })
 export class NavbarComponent implements OnInit {
 
-    constructor(private logger: Logger) { }
+  constructor(private logger: Logger) { }
 
-    ngOnInit() {
+  ngOnInit() {
 
-    }
+  }
 
 }

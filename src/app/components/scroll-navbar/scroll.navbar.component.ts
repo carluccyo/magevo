@@ -5,8 +5,8 @@ import { WindowRef } from '../../shared/window/WindowRef';
 import { Observable } from 'rxjs/Rx';
 
 @Component({
-    selector: 'top-scroll-navbar',
-    template: `
+  selector: 'top-scroll-navbar',
+  template: `
 
     <nav class="navbar navbar-default navbar-fixed-top blu-background" [class.top-nav-collapse]="isClassVisible">
 
@@ -60,7 +60,7 @@ import { Observable } from 'rxjs/Rx';
 
 
     `,
-    styles: [`
+  styles: [`
         .navbar {
           padding: 30px 0 ;
           -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -82,35 +82,35 @@ import { Observable } from 'rxjs/Rx';
             padding: 0;
         }
       `
-    ]
+  ]
 })
 export class ScrollNavbarComponent implements OnInit {
 
-    isClassVisible: false;
+  isClassVisible: false;
 
-    constructor(private logger: Logger, private _window : WindowRef) {}
+  constructor(private logger: Logger, private _window: WindowRef) { }
 
-    ngOnInit() {
-      this.logger.info('init navbar for window', this._window.nativeWindow);
+  ngOnInit() {
+    this.logger.info('init navbar for window', this._window.nativeWindow);
 
-      Observable.fromEvent(this._window, 'resize')
+    Observable.fromEvent(this._window, 'resize')
       .debounceTime(200)
       .subscribe((event) => {
         this.logger.info('resize', event);
       });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  clickout(event) {
+
+    this.logger.debug('HostListener scroll', this._window.nativeWindow.pageYOffset);
+
+    if (this._window.nativeWindow.pageYOffset > 70) {
+      this.isClassVisible = true;
+    } else {
+      this.isClassVisible = false;
     }
 
-    @HostListener('window:scroll', ['$event'])
-    clickout(event) {
-
-      this.logger.debug('HostListener scroll', this._window.nativeWindow.pageYOffset);
-
-      if(this._window.nativeWindow.pageYOffset > 70){
-        this.isClassVisible = true;
-      }else{
-        this.isClassVisible = false;
-      }
-
-    }
+  }
 
 }
