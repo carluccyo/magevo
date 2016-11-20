@@ -39,7 +39,7 @@ import {RankingBoxComponent, RankingBoxService} from './ranking-box';
     providers: [
         Logger,
         LocationService,
-        ItemListService, 
+        ItemListService,
         RankingBoxService
     ]
 })
