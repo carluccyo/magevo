@@ -19,8 +19,6 @@ export class TopBannerComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit() { 
-
-    }
+    ngOnInit() { }
 
 }
