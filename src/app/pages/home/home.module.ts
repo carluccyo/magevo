@@ -16,8 +16,9 @@ import { ItemComponent } from '../../shared/item/item.component';
 import { ItemHorizontalComponent } from '../../shared/item/item.horizontal.component';
 import { ItemVerticalComponent } from '../../shared/item/item.vertical.component';
 
-import { TopBannerComponent } from './top-banner'
+import { TopBannerComponent } from './top-banner';
 import {BoxArchiveComponent} from './box-archive';
+import {RankingBoxComponent, RankingBoxService} from './ranking-box';
 
 @NgModule({
     imports: [
@@ -32,12 +33,14 @@ import {BoxArchiveComponent} from './box-archive';
         ItemHorizontalComponent,
         ItemVerticalComponent,
         TopBannerComponent,
-        BoxArchiveComponent
+        BoxArchiveComponent,
+        RankingBoxComponent
     ],
     providers: [
         Logger,
         LocationService,
-        ItemListService
+        ItemListService, 
+        RankingBoxService
     ]
 })
 export class HomeModule { }

@@ -26,15 +26,25 @@
         *ngFor="let item of items; let i = index; trackBy: trackByFn">
         <item-detail [item]="item"></item-detail>
       </div>
-      
+
     </div>
 
     <div class="col-md-4">
+
+      <ranking-box></ranking-box>
+
+
       <div *ngFor="let item of items; let i = index; trackBy: trackByFn">
         <item-vertical [item]="item"></item-vertical>
       </div>
+
     </div>
 
   </div>
 
 </div>
+
+<div class="container">
+  <box-archive></box-archive>
+</div>
+
