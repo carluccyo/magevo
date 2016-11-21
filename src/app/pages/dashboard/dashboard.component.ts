@@ -7,8 +7,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
     template: require('./dashboard.html')
 })
 export class DashboardComponent {
-
-    constructor() {
-    }
-
+    constructor() {}
 }

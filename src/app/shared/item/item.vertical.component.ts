@@ -1,39 +1,23 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
-import { Item } from './item.model';
+import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
+import { Item } from './item.model'
 
 @Component({
-    selector: 'item-detail',
+    selector: 'item-vertical',
     template: `
-
-    <div class="row item-box">
-
-      <div class="col-sm-12 col-xs-12">
-
-        <div class="col-sm-6 col-xs-12">
-          <div class="clear"></div>
-          <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
-        </div>
-
-        <div class="col-sm-6 col-xs-12">
-          <div class="time">16:13 - 12 novembre 2016</div>
-          <div class="message">ciaone</div>
-        </div>
-
+      <div class="row item-vertical-box">
+        <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive m-l-0" />
+        <div class="message">{{item.title}}</div>
       </div>
-
-    </div>
-
     `,
     styles: [`
 
-        .red {
-          border: 1px solid red;
-        }
-
-        .item-desc{
+        .item-desc {
             margin: 2px;
         }
 
+        .m-l-0 {
+          margin: 0;
+        }
 
         .time {
           text-align: left;
@@ -61,9 +45,10 @@ import { Item } from './item.model';
           clear: both;
         }
 
-        .item-box{
-          border: 2px solid #ddd;
-          margin: 2px;
+        .item-vertical-box{
+          border: 1px solid #006baf;
+          margin-top: 10px;
+          margin-bottom: 10px;
           padding: 5px;
         }
 
@@ -82,7 +67,7 @@ import { Item } from './item.model';
       `]
 })
 
-export class ItemComponent implements OnInit, OnDestroy {
+export class ItemVerticalComponent implements OnInit, OnDestroy {
 
     @Input() item: Item;
 

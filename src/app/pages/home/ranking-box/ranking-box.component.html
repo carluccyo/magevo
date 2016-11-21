@@ -1,0 +1,22 @@
+<div class="row general-box">
+
+    <div class="box-title">
+        <h1>Classifica</h1>
+
+        <div class="clear"></div>
+
+        <table class="table ranking-box">
+
+            <tbody>
+                <tr class="box-row" *ngFor="let team of rankingList ? rankingList.teams : []; let i = index; trackBy: trackByFn">
+                    <th class="ranking" scope="row">{{team.ranking}}</th>
+                    <td class="team">{{team.name}}</td>
+                    <td class="points">{{team.points}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

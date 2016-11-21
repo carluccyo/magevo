@@ -1,4 +1,4 @@
-import { AUTO_STYLE, Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { Logger } from 'angular2-logger/core';
 import { PageConstant } from '../shared/page.consts';
 
@@ -7,72 +7,74 @@ import { ItemListService } from '../../shared/item/item.list.service';
 import { LocationService, Location } from "angular2-geolocalitation/core";
 
 @Component({
-    selector: PageConstant.HOME_SELECTOR + PageConstant.SUFFIX,
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    providers: [
-      Logger,
-      ItemListService
-    ],
-    animations: [
-      trigger('animationState', [
-        state('collapsed, void', style({ borderBottom: '0' })),
-        state('expanded, void', style({ boxShadow: '8px 8px 3px #006bae' })),
-        transition('collapsed <=> expanded', [
-          animate(1000)
-        ])
-      ]),
-      trigger('flyHorizontalOut', [
-        state('in', style({transform: 'translateX(0)'})),
-        transition('void => *', [
-          style({transform: 'translateX(-100%)'}),
-          animate(1300)
-        ]),
-        transition('* => void', [
-          animate(1300, style({transform: 'translateX(100%)'}))
-        ])
-      ]),
-      trigger('flyVerticalOut', [
-        state('in', style({transform: 'translateY(0)'})),
-        transition('void => *', [
-          style({transform: 'translateY(-100%)'}),
-          animate(1500)
-        ]),
-        transition('* => void', [
-          animate(1500, style({transform: 'translateY(100%)'}))
-        ])
+  selector: PageConstant.HOME_SELECTOR + PageConstant.SUFFIX,
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  providers: [
+    Logger,
+    ItemListService
+  ],
+  animations: [
+    trigger('animationState', [
+      state('collapsed, void', style({ borderBottom: '0' })),
+      state('expanded, void', style({ boxShadow: '2px 2px 2px 2px #006bae' })),
+      transition('collapsed <=> expanded', [
+        animate(500)
       ])
-    ]
+    ]),
+    trigger('flyHorizontalOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(-100%)' }),
+        animate(1300)
+      ]),
+      transition('* => void', [
+        animate(1300, style({ transform: 'translateX(100%)' }))
+      ])
+    ]),
+    trigger('flyVerticalOut', [
+      state('in', style({ transform: 'translateY(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateY(-100%)' }),
+        animate(1500)
+      ]),
+      transition('* => void', [
+        animate(1500, style({ transform: 'translateY(100%)' }))
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
 
-    constructor(public logger: Logger, private itemListService: ItemListService, public locationService: LocationService) { }
+  constructor(public logger: Logger, private itemListService: ItemListService, public locationService: LocationService) { }
 
-    title = 'List of items';
+  title = 'List of items';
 
-    location: Location;
+  showTopBanner = true;
 
-    items: Item[];
-    horizontalItems: Item[];
+  location: Location;
 
-    ngOnInit() {
-        this.logger.debug('HomeComponent init...');
-        this.getItems();
-        this.location = this.locationService.getLocation();
-    }
+  items: Item[];
+  horizontalItems: Item[];
 
-    getItems() {
-        this.itemListService.getItems().then(items => this.items = items);
-        this.itemListService.getItemsSlowly().then(horizontalItems => this.horizontalItems = horizontalItems);
-    }
+  ngOnInit() {
+    this.logger.debug('HomeComponent init...');
+    this.getItems();
+    this.location = this.locationService.getLocation();
+  }
 
-    expand(_item : Item) {
-      _item.animationState = 'expanded';
-    }
+  getItems() {
+    this.itemListService.getItems().then(items => this.items = items);
+    this.itemListService.getItemsSlowly().then(horizontalItems => this.horizontalItems = horizontalItems);
+  }
 
-    collapse(_item : Item) {
-      _item.animationState = 'collapsed';
-    }
+  expand(_item: Item) {
+    _item.animationState = 'expanded';
+  }
+
+  collapse(_item: Item) {
+    _item.animationState = 'collapsed';
+  }
 
 
 }

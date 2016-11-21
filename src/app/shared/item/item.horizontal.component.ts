@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
-import { Item } from './item.model'
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Item } from './item.model';
 
 @Component({
     selector: 'item-horizontal',

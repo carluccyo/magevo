@@ -3,14 +3,18 @@
   <div class="row">
 
     <div class="col-md-12">
-      <div on-mouseover='expand(item)' on-mouseleave='collapse(item)'  [@flyVerticalOut]='item.id' [@animationState]='item.animationState' class="col-md-2" style="padding-left: 0 !important; padding-right: 0 !important;" *ngFor="let item of horizontalItems; let i = index; trackBy: trackByFn">
+      <div on-mouseover='expand(item)' on-mouseleave='collapse(item)' [@flyVerticalOut]='item.id' [@animationState]='item.animationState'
+        class="col-md-2" style="padding-left: 0 !important; padding-right: 0 !important;" *ngFor="let item of horizontalItems; let i = index; trackBy: trackByFn">
         <item-horizontal [item]="item"></item-horizontal>
       </div>
     </div>
 
   </div>
 
+  <top-banner *ngIf="showTopBanner"></top-banner>
+
 </div>
+
 
 <div class="container">
 
@@ -18,7 +22,8 @@
 
     <div class="col-md-8">
 
-      <div on-mouseover='expand(item)' on-mouseleave='collapse(item)' [@flyHorizontalOut]='item.id' [@animationState]='item.animationState' *ngFor="let item of items; let i = index; trackBy: trackByFn">
+      <div on-mouseover='expand(item)' on-mouseleave='collapse(item)' [@flyHorizontalOut]='item.id' [@animationState]='item.animationState'
+        *ngFor="let item of items; let i = index; trackBy: trackByFn">
         <item-detail [item]="item"></item-detail>
       </div>
 
@@ -26,8 +31,10 @@
 
     <div class="col-md-4">
 
+      <ranking-box></ranking-box>
+
       <div *ngFor="let item of items; let i = index; trackBy: trackByFn">
-        <pre>{{item | json}}</pre>
+        <item-vertical [item]="item"></item-vertical>
       </div>
 
     </div>
@@ -35,3 +42,8 @@
   </div>
 
 </div>
+
+<div class="container">
+  <box-archive></box-archive>
+</div>
+
