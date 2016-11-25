@@ -3,4 +3,5 @@ export class Item {
     title: string;
     description: string;
     mediaUrl: string;
+    animationState? : string;
 }
