@@ -1,0 +1,18 @@
+body {
+  background-color: #FFF; }
+
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
+.error {
+  border-color: red; }
+
+.warning {
+  border-color: yellow; }
+
+/*# sourceMappingURL=app.d8d3715ebf04710d8d6c.css.map*/
