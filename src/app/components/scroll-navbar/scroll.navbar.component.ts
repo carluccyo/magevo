@@ -86,14 +86,14 @@ import { Observable } from 'rxjs/Rx';
 })
 export class ScrollNavbarComponent implements OnInit {
 
-  isClassVisible: false;
+  isClassVisible: boolean;
 
   constructor(private logger: Logger, private _window: WindowRef) { }
 
   ngOnInit() {
     this.logger.info('init navbar for window', this._window.nativeWindow);
 
-    Observable.fromEvent(this._window, 'resize')
+    Observable.fromEvent(this._window.nativeWindow, 'resize')
       .debounceTime(200)
       .subscribe((event) => {
         this.logger.info('resize', event);
