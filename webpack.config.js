@@ -51,13 +51,14 @@ module.exports = function makeWebpackConfig() {
     'app': './src/main.ts' // our angular app
   };
 
+
   /**
    * Output
    * Reference: http://webpack.github.io/docs/configuration.html#output
    */
   config.output = isTest ? {} : {
     path: root('dist'),
-    publicPath: isProd ? './' : 'http://localhost:3000/',
+    publicPath: isProd ? '/' : 'http://localhost:3000/',
     filename: isProd ? 'js/[name].[hash].js' : 'js/[name].js',
     chunkFilename: isProd ? '[id].[hash].chunk.js' : '[id].chunk.js'
   };
@@ -334,3 +335,4 @@ function root(args) {
   args = Array.prototype.slice.call(arguments, 0);
   return path.join.apply(path, [__dirname].concat(args));
 }
+
