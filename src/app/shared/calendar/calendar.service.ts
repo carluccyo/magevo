@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
-export class TimelineService {
+export class CalendarService {
     
     constructor(private http: Http) { }
 
