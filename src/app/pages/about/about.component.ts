@@ -13,7 +13,16 @@ export const ITEMS : [AboutItem] = [
 
 @Component({
   selector: 'my-about',
-  templateUrl: './about.component.html',
+  template:`
+    <div class="container">
+      <div class="row" >
+         <div *ngFor="let item of items; let i = index; trackBy: trackByFn">
+          <h3>{{item.title + item.id}}</h3>
+          <p>{{item.title}}</p>
+         </div>         
+      </div>
+    </div>
+  `,
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
@@ -26,7 +35,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     console.log('Hello About');
-    
+    this.items = ITEMS;
   }
 
 }
