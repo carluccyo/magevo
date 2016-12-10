@@ -5,7 +5,10 @@ export class AboutItem {
   title: String;
 }
 
-
+export const ITEMS : [AboutItem] = [
+  {id: "1", title: 'title1'},
+  {id: "2", title: 'title2'}
+]
 
 
 @Component({
