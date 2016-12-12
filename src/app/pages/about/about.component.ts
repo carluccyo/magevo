@@ -26,13 +26,19 @@ export const ITEMS: [AboutItem] = [
   template: `
     <div class="container">
       <div class="row" >
-         <div [@flyInOut]='id' class="item col-md-2" *ngFor="let item of items; let i = index; trackBy: trackByFn">
+         <div [@move]='id' class="item col-md-2" *ngFor="let item of items; let i = index; trackBy: trackByFn">
           <h3>{{item.title + item.id}}</h3>
           <p>{{item.title}}</p>
          </div>         
       </div>
       <div class="row" >
          <div [@rotate]='id' [@moveFast]='id' class="item col-md-2" *ngFor="let item of items; let i = index; trackBy: trackByFn">
+          <h3>{{item.title + item.id}}</h3>
+          <p>{{item.title}}</p>
+         </div>         
+      </div>
+      <div class="row" >
+         <div [@flyInOut]='id' [@moveFast]='id' class="item col-md-2" *ngFor="let item of items; let i = index; trackBy: trackByFn">
           <h3>{{item.title + item.id}}</h3>
           <p>{{item.title}}</p>
          </div>         
@@ -76,7 +82,7 @@ export const ITEMS: [AboutItem] = [
       transition('* => void', [
         group([
           animate('0.9s ease', style({
-            transform: 'translateX(50px)',
+            transform: 'translateX(350px)',
             width: 10
           })),
           animate('0.9s 0.2s ease', style({
