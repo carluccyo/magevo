@@ -29,19 +29,19 @@ export const ITEMS: [AboutItem] = [
          <div [@move]='id' class="item col-md-2" *ngFor="let item of items; let i = index; trackBy: trackByFn">
           <h3>{{item.title + item.id}}</h3>
           <p>{{item.title}}</p>
-         </div>         
+         </div>
       </div>
       <div class="row" >
          <div [@rotate]='id' [@moveFast]='id' class="item col-md-2" *ngFor="let item of items; let i = index; trackBy: trackByFn">
           <h3>{{item.title + item.id}}</h3>
           <p>{{item.title}}</p>
-         </div>         
+         </div>
       </div>
       <div class="row" >
          <div [@flyInOut]='id' [@moveFast]='id' class="item col-md-2" *ngFor="let item of items; let i = index; trackBy: trackByFn">
           <h3>{{item.title + item.id}}</h3>
           <p>{{item.title}}</p>
-         </div>         
+         </div>
       </div>
     </div>
   `,
