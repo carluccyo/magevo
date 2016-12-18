@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { routing } from './dashboard.routing';
 
 import { DashboardComponent } from './dashboard.component';
+import { ChartComponent } from './charts/chart.component';
 
 import { Logger } from 'angular2-logger/core';
 import { LocationService } from 'angular2-geolocalitation/core';
@@ -20,7 +21,8 @@ import { LocationService } from 'angular2-geolocalitation/core';
         routing
     ],
     declarations: [
-        DashboardComponent
+        DashboardComponent,
+        ChartComponent
     ],
     providers: [
         Logger,
