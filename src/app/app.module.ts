@@ -13,7 +13,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ScrollNavbarComponent } from './components/scroll-navbar/scroll.navbar.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+// import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 import { Logger, Level } from 'angular2-logger/core';
 import { LocationService } from 'angular2-geolocalitation/core';
@@ -31,12 +32,13 @@ import { WindowRef } from './shared/window/WindowRef';
     FormsModule,
     PagesModule,
     HomeModule,
+    DashboardModule,
     routing
   ],
   declarations: [
     AppComponent,
     AboutComponent,
-    DashboardComponent,
+    // DashboardComponent,
     NavbarComponent,
     ScrollNavbarComponent
   ],

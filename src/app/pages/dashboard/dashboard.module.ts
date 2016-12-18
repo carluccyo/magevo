@@ -8,13 +8,9 @@ import { routing } from './dashboard.routing';
 import { DashboardComponent } from './dashboard.component';
 
 import { Logger } from 'angular2-logger/core';
-
 import { LocationService } from 'angular2-geolocalitation/core';
 
-import { ItemListService } from '../../shared/item/item.list.service';
-import { ItemComponent } from '../../shared/item/item.component';
-import { ItemHorizontalComponent } from '../../shared/item/item.horizontal.component';
-import { ItemVerticalComponent } from '../../shared/item/item.vertical.component';
+
 
 @NgModule({
     imports: [
@@ -24,15 +20,11 @@ import { ItemVerticalComponent } from '../../shared/item/item.vertical.component
         routing
     ],
     declarations: [
-        DashboardComponent,
-        ItemComponent,
-        ItemHorizontalComponent,
-        ItemVerticalComponent
+        DashboardComponent
     ],
     providers: [
         Logger,
-        LocationService,
-        ItemListService
+        LocationService
     ]
 })
-export class HomeModule { }
+export class DashboardModule { }
