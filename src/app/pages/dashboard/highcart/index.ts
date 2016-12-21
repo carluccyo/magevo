@@ -1,2 +1,2 @@
 export * from './chart.component';
-export * from './HighchartsWrapper';
+export * from './highchartsWrapper';
