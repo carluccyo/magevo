@@ -68,6 +68,9 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#resolve
    */
   config.resolve = {
+    alias: {
+      highcharts: "../node_modules/highcharts/highstock.src.js"
+    },
     // only discover files that have those extensions
     extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html'],
   };
