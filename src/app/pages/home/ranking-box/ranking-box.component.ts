@@ -6,6 +6,14 @@ export const RANKING : RankingList = {
         { id: 1, name: 'Team1', points: 33,  ranking: 1} ,
         { id: 2, name: 'Team2', points: 23, ranking: 2 },
         { id: 3, name: 'Team3', points: 13,  ranking: 3 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
+        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
         { id: 11, name: 'Team4', points: 3,  ranking: 4 }
     ]
 }
