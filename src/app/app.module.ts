@@ -24,6 +24,7 @@ import { HomeModule } from './pages/home/home.module';
 
 import { WindowRef } from './shared/window/WindowRef';
 
+import {IMAGELAZYLOAD_DIRECTIVES} from './components/image-lazy-load';
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { WindowRef } from './shared/window/WindowRef';
     AppComponent,
     AboutComponent,
     // DashboardComponent,
+    IMAGELAZYLOAD_DIRECTIVES,
     NavbarComponent,
     ScrollNavbarComponent
   ],
