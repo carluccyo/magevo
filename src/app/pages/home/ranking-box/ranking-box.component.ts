@@ -8,12 +8,6 @@ export const RANKING : RankingList = {
         { id: 3, name: 'Team3', points: 13,  ranking: 3 },
         { id: 11, name: 'Team4', points: 3,  ranking: 4 },
         { id: 11, name: 'Team4', points: 3,  ranking: 4 },
-        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
-        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
-        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
-        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
-        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
-        { id: 11, name: 'Team4', points: 3,  ranking: 4 },
         { id: 11, name: 'Team4', points: 3,  ranking: 4 }
     ]
 }
