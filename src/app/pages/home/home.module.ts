@@ -20,6 +20,7 @@ import { TopBannerComponent } from './top-banner';
 import {BoxArchiveComponent} from './box-archive';
 import {RankingBoxComponent, RankingBoxService} from './ranking-box';
 
+import {IMAGELAZYLOAD_DIRECTIVES, ImageLazyLoaderService, WebWorkerService} from '../../components/image-lazy-load';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {RankingBoxComponent, RankingBoxService} from './ranking-box';
         ItemHorizontalComponent,
         ItemVerticalComponent,
         TopBannerComponent,
+        IMAGELAZYLOAD_DIRECTIVES,
         BoxArchiveComponent,
         RankingBoxComponent
     ],
@@ -42,6 +44,8 @@ import {RankingBoxComponent, RankingBoxService} from './ranking-box';
         Logger,
         LocationService,
         ItemListService,
+        ImageLazyLoaderService,
+        WebWorkerService,
         RankingBoxService
     ]
 })

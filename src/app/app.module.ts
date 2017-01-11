@@ -40,7 +40,7 @@ import {IMAGELAZYLOAD_DIRECTIVES} from './components/image-lazy-load';
     AppComponent,
     AboutComponent,
     // DashboardComponent,
-    IMAGELAZYLOAD_DIRECTIVES,
+    // IMAGELAZYLOAD_DIRECTIVES,
     NavbarComponent,
     ScrollNavbarComponent
   ],
