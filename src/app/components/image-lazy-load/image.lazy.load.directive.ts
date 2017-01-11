@@ -1,9 +1,9 @@
 import { Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({ 
-    selector: '[imageLazyLoadItem]' 
+    selector: '[imageLazyLoad]' 
 })
-export class ImageLazyLoadItemDirective {
+export class ImageLazyItemDirective {
 
     constructor(el: ElementRef) {
        

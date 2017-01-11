@@ -1,1 +1,1 @@
-export * from './imageLazyLoadItem';
+export * from './image.lazy.load.directive';
