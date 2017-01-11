@@ -5,7 +5,7 @@ import { Item } from './item.model';
     selector: 'item-horizontal',
     template: `
       <div class="row item-box">
-        <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
+        <img [imageLazyLoadItem]="item.mediaUrl" itemprop="image" alt="ciao" class="img-responsive" />
         <div class="message">{{item.title}}</div>
       </div>
     `,

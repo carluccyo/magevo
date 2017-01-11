@@ -34,7 +34,6 @@
       <ranking-box></ranking-box>
 
       <div *ngFor="let item of items; let i = index; trackBy: trackByFn">
-        <img [imageLazyLoadItem]="'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150'" alt="">
         <item-vertical [item]="item"></item-vertical>
       </div>
 

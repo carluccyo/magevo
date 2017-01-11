@@ -11,7 +11,7 @@ import { Item } from './item.model';
 
         <div class="col-sm-6 col-xs-12">
           <div class="clear"></div>
-          <img src={{item.mediaUrl}} itemprop="image" alt="ciao" class="img-responsive" />
+          <img [imageLazyLoadItem]="item.mediaUrl" itemprop="image" alt="ciao" class="img-responsive" />
         </div>
 
         <div class="col-sm-6 col-xs-12">
