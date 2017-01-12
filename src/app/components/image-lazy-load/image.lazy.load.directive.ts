@@ -9,8 +9,10 @@ import {ImageLazyLoaderService, IImageLazyLoadConfig} from './image.lazy.load.se
   selector: '[imageLazyLoadItem]'
 })
 export class ImageLazyLoadItemDirective {
+
   @Input('imageLazyLoadItem') imageLazyLoadItem: string;
   @Input() imageLazyLoadingContainer: string;
+  
   public loading: boolean = false;
   public loaded: boolean = false;
   public error: boolean = false;
@@ -19,6 +21,7 @@ export class ImageLazyLoadItemDirective {
   constructor(private el: ElementRef, private renderer: Renderer, private lazyLoader: ImageLazyLoaderService) {
     this.tagName = el.nativeElement.tagName;
   }
+
   /*
   * @returns return position/dimension info as an Object `{top, left, bottom}`.
   */
@@ -31,6 +34,7 @@ export class ImageLazyLoadItemDirective {
       bottom: top + this.el.nativeElement.clientHeight
     };
   }
+
   /*
   * @returns container target to place `loading`/`loaded` classes onto.
   */
@@ -127,7 +131,9 @@ export class ImageLazyLoadItemDirective {
   selector: '[imageLazyLoadArea]'
 })
 export class ImageLazyLoadAreaDirective implements OnInit {
+
   @Input('imageLazyLoadArea') threshold: number;
+  
   /**
    * Object that implements IImageLazyLoadConfig:
    * headers?: any = custom headers
@@ -156,6 +162,7 @@ export class ImageLazyLoadAreaDirective implements OnInit {
       this._sub = undefined;
     }
   }
+
   private scrollSubscribe() {
     let scrollStream = Observable.fromEvent(window, 'scroll').debounceTime(250);
 
@@ -163,6 +170,7 @@ export class ImageLazyLoadAreaDirective implements OnInit {
       this.loadInView();
     });
   }
+
   private init() {
 
     let subScroll = () => {

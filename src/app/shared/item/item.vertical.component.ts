@@ -4,7 +4,7 @@ import { Item } from './item.model'
 @Component({
     selector: 'item-vertical',
     template: `
-      <div class="row item-vertical-box">
+      <div imageLazyLoadArea class="row item-vertical-box">
         <img [imageLazyLoadItem]="item.mediaUrl" itemprop="image" alt="ciao" class="img-responsive m-l-0" />
         <div class="message">{{item.title}}</div>
       </div>
