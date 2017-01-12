@@ -49,7 +49,7 @@ module.exports = function makeWebpackConfig() {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
     'app': './src/main.ts', // our angular app
-    'xhrWorker': './src/public/assets/js/xhrWorker'
+    // 'xhrWorker': './src/assets/js/xhrWorker.js'
   };
 
 
@@ -313,9 +313,27 @@ module.exports = function makeWebpackConfig() {
 
       // Copy assets from the public folder
       // Reference: https://github.com/kevlened/copy-webpack-plugin
-      new CopyWebpackPlugin([{
-        from: root('src/public')
-      }])
+      new CopyWebpackPlugin([
+          { from: root('src/public')},
+          { from: root('src/assets/js/xhrWorker.js'), to: 'xhrWorker.js'  },
+          
+        ], {
+            ignore: [
+                // Doesn't copy any files with a txt extension    
+                //'*.txt',
+
+                // Doesn't copy any file, even if they start with a dot
+                //'**/*',
+
+                // Doesn't copy any file, except if they start with a dot
+                //{ glob: '**/*', dot: false }
+            ],
+
+            // By default, we only copy modified files during
+            // a watch or webpack-dev-server build. Setting this
+            // to `true` copies all files.
+            copyUnmodified: true
+        })
     );
   }
 

@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
 export class WebWorkerService {
   static supported: boolean = typeof (Worker) !== 'undefined';
   static enabled: boolean = true; // enabled by default, however can be manually turned off
-  static workerUrl: string = 'js/xhrWorker.js';
+  static workerUrl: string = 'xhrWorker.js';
   public activeWorkers: Array<any> = [];
 
   load(config: any, msgFn: any, errorFn?: any):number {
