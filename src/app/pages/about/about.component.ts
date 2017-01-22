@@ -1,4 +1,4 @@
-import { Component, OnInit, trigger, state, style, group, transition, animate, keyframes } from '@angular/core';
+import { Component, OnInit, trigger, state, style, group, transition, animate } from '@angular/core';
 
 export class AboutItem {
   id: String;
