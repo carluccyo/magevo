@@ -13,7 +13,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ScrollNavbarComponent } from './components/scroll-navbar/scroll.navbar.component';
-// import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 import { Logger, Level } from 'angular2-logger/core';
@@ -24,7 +24,6 @@ import { HomeModule } from './pages/home/home.module';
 
 import { WindowRef } from './shared/window/WindowRef';
 
-import {IMAGELAZYLOAD_DIRECTIVES} from './components/image-lazy-load';
 
 @NgModule({
   imports: [
@@ -39,8 +38,6 @@ import {IMAGELAZYLOAD_DIRECTIVES} from './components/image-lazy-load';
   declarations: [
     AppComponent,
     AboutComponent,
-    // DashboardComponent,
-    // IMAGELAZYLOAD_DIRECTIVES,
     NavbarComponent,
     ScrollNavbarComponent
   ],
